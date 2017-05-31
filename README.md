@@ -20,12 +20,11 @@ tblxl.save(sheet)
 ```
 
 ## Result
-[[https://github.com/airlanggacahya/tblxl/blob/master/img/html.png|alt=html source]]
+### Html
+![html source](https://github.com/airlanggacahya/tblxl/blob/master/img/html.png)
 
-Into
-
-[[https://github.com/airlanggacahya/tblxl/blob/master/img/excel.png|alt=excel destination]]
-
+### Excel Conversion
+![excel conversion](https://github.com/airlanggacahya/tblxl/blob/master/img/excel.png)
 
 ## Dependency
 tbl2xlsx depends on:
