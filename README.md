@@ -27,7 +27,7 @@ tblxl.save(sheet)
 ![excel conversion](https://github.com/airlanggacahya/tblxl/blob/master/img/excel.png)
 
 ## Dependency
-tbl2xlsx depends on:
+tblxl depends on:
  * xlsx-js
  * Blob
  * FileSaver
@@ -39,9 +39,12 @@ tbl2xlsx depends on:
 All dependencies are located on /src/lib
 
 ## Run test page
-Start static server on project root, look at [Big list of http static server](https://gist.github.com/willurd/5720255) for ideas. My favourite is python.
+Start static server on project root, look at [big list of http static server](https://gist.github.com/willurd/5720255) for ideas. My favourite is python.
 ```bash
 python -m http.server 8000
 ```
 
 After that, open http://localhost:8000/test/index.html using some modern browser.
+
+## Help Wanted
+Help wanted to reduce dependencies or to rebase our custom xlsx-js into upstream xlsx-js project.
