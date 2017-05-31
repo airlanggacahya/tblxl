@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>World Cup 2014 Group Result</title>
+        <script src="/src/lib/lodash.js"></script>
+        <script src="/src/lib/jquery-2.1.0.min.js"></script>
+        <script src="/src/lib/Blob.min.js"></script>
+        <script src="/src/lib/FileSaver.min.js"></script>
+        <script src="/src/lib/jszip.js"></script>
+        <script src="/src/lib/xlsx.js"></script>
+        <script src="/src/lib/jquery-cellpos.js"></script>
+        <script src="/src/tblxl.js"></script>
+
+        <style>
+            #table-data {
+                border-collapse: collapse;
+            }
+
+            #table-data tr td {
+                border: 1px solid #a2a9b1;
+                padding: 5px;
+            }
+
+            #table-data tr.header td {
+                background-color: #eaecf0;
+                padding: 5px 10px;
+                text-align: center;
+                font-weight: bold;
+                border-color: #ff0000;
+            }
+
+            #table-data tr.advance td {
+                background-color: #bbf3bb;
+            }
+
+            #table-data tr.group-header td {
+                background-color: #ffdfc4;
+            }
+            
+            #table-data tr td.group-name {
+                background-color: #51a3a3;
+                color: #ffffff;
+                font-weight: bold;
+            }
+
+            #table-data tr td.rank {
+                text-align: center
+            }
+
+            #table-data tr td.point {
+                text-align: right
+            }
+
+            #table-data tr td.align-down {
+                vertical-align: bottom;
+            }
+
+            #table-data tr td.align-up {
+                vertical-align: top;
+            }
+        </style>
+        <script>
+            function exportExcel() {
+                var sheet = tblxl.table2sheet("table-data")
+                tblxl.save(sheet, "worldcup.xlsx")
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="exportExcel()">
+            Excel!
+        </button>
+        <hr>
+        <table id="table-data">
+            <tr class="header">
+                <td colspan="4">
+                    World Cup 2014 Group A and B Result
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="group-name">
+                    Group A
+                </td>
+            </tr>
+            <tr class="group-header">
+                <td>Rank</td>
+                <td>Country</td>
+                <td>Point</td>
+                <td>Desc</td>
+            </tr>
+            <tr class="advance">
+                <td class="rank">1</td>
+                <td>Brazil</td>
+                <td class="point">7</td>
+                <td rowspan="2">Advance to knockout stage</td>
+            </tr>
+            <tr class="advance">
+                <td class="rank">2</td>
+                <td>Mexico</td>
+                <td class="point">7</td>
+            </tr>
+            <tr>
+                <td class="rank">3</td>
+                <td>Croatia</td>
+                <td class="point">3</td>
+                <td rowspan="2" class="align-up">Does not advance</td>
+            </tr>
+            <tr>
+                <td class="rank">4</td>
+                <td>Cameroon</td>
+                <td class="point">0</td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td colspan="4" class="group-name">
+                    Group B
+                </td>
+            </tr>
+            <tr class="group-header">
+                <td>Rank</td>
+                <td>Country</td>
+                <td>Point</td>
+                <td>Desc</td>
+            </tr>
+            <tr class="advance">
+                <td class="rank">1</td>
+                <td>Netherlands</td>
+                <td class="point">9</td>
+                <td rowspan="2">Advance to knockout stage</td>
+            </tr>
+            <tr class="advance">
+                <td class="rank">2</td>
+                <td>Chile</td>
+                <td class="point">6</td>
+            </tr>
+            <tr>
+                <td class="rank">3</td>
+                <td>Spain</td>
+                <td class="point">3</td>
+                <td rowspan="2" class="align-down">Does not advance</td>
+            </tr>
+            <tr>
+                <td class="rank">4</td>
+                <td>Australia</td>
+                <td class="point">3</td>
+            </tr>
+        </table>
+    </body>
+</html>
